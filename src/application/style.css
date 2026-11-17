@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin: 40px 0;
+}
+
+/* レイアウト */
+main {
+  display: grid;
+  place-items: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 260px);
+  gap: 16px;
+}
+
+/* パネル（商品・カート）*/
+.panel {
+  height: 600px;
+  border: solid 1px #333;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin: 0;
+  height: 50px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background-color: #ddd;
+  border-bottom: solid 2px #333;
+  font-size: 20px;
+}
+
+.list {
+  flex: 1;
+  margin: 0;
+  padding: 12px 16px;
+  list-style: none;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 商品カード */
+.card {
+  position: relative;
+  border: solid 1px #333;
+  background-color: #fff;
+}
+
+.card-body {
+  height: 88px;
+  padding-top: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* セール中（左上） */
+.sale-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1px 4px;
+  background-color: #fde1f5;
+  border-right: solid 1px #333;
+  border-bottom: solid 1px #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 数量（右上）：SelectBox */
+.quantity-select {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 56px;
+  height: 20px;
+  padding: 0 4px;
+  border: none;
+  border-left: solid 1px #333;
+  border-bottom: solid 1px #333;
+  border-radius: 0;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-align-last: center;
+  cursor: pointer;
+  appearance: none;
+}
+
+/* カード下部のボタン */
+.card-btn {
+  display: block;
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-top: solid 1px #333;
+  background-color: #ddd;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.card-btn:hover {
+  background-color: #ccc;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  margin-top: 20px;
+}
+
+/* 合計 */
+.breakdown {
+  grid-column: 2;
+  border: solid 1px #333;
+}
+
+.breakdown-body {
+  padding: 8px 12px;
+}
+
+.breakdown p {
+  margin: 4px 0;
+  font-size: 18px;
+  font-weight: bold;
+}

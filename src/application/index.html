@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TS応用課題</title>
+  </head>
+  <body>
+    <h1>商品カート</h1>
+    <main class="shopping-cart" id="shopping-cart">
+      <div class="content">
+        <!-- 商品リスト -->
+        <section class="panel shopping-section">
+          <h2>商品</h2>
+          <div class="list" id="shopping"></div>
+        </section>
+
+        <!-- カート -->
+        <aside class="panel cart-section">
+          <h2 id="cart-title">カート(0)</h2>
+          <ul class="list cart" id="cart"></ul>
+        </aside>
+
+        <!-- 合計 -->
+        <section class="breakdown">
+          <h2 id="cart-count">カート内(0)</h2>
+          <div class="breakdown-body">
+            <p>点数: <span id="total-score">0</span>点</p>
+            <p>割引率: <span id="total-discount">0</span>%</p>
+            <p>合計金額: <span id="total-amount">¥0</span></p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="index3.js"></script>
+  </body>
+</html>
